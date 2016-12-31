@@ -1,0 +1,10 @@
+C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\bin\Debug\Constellations.exe.config
+C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\bin\Debug\Constellations.exe
+C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\bin\Debug\Constellations.pdb
+C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.csprojResolveAssemblyReference.cache
+C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.UI.MainForm.resources
+C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.csproj.GenerateResource.Cache
+C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.exe
+C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.pdb
+C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.Properties.Resources.resources
+C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.UI.CalenderLookUpForm.resources

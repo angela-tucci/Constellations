@@ -1,0 +1,453 @@
+﻿namespace Constellations.UI
+{
+    partial class MainForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.comboBoxChooseConstellation = new System.Windows.Forms.ComboBox();
+            this.labelChooseConstellation = new System.Windows.Forms.Label();
+            this.comboBoxChooseRepo = new System.Windows.Forms.ComboBox();
+            this.labelChooseRepo = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelAbbreviation = new System.Windows.Forms.Label();
+            this.labelGenitive = new System.Windows.Forms.Label();
+            this.buttonViewStars = new System.Windows.Forms.Button();
+            this.pictureBoxImage = new System.Windows.Forms.PictureBox();
+            this.buttonViewMythologyImage = new System.Windows.Forms.Button();
+            this.buttonViewSkyImage = new System.Windows.Forms.Button();
+            this.labelFamily = new System.Windows.Forms.Label();
+            this.labelOrigin = new System.Windows.Forms.Label();
+            this.labelMeaning = new System.Windows.Forms.Label();
+            this.labelBrightestStar = new System.Windows.Forms.Label();
+            this.labelHemisphere = new System.Windows.Forms.Label();
+            this.labelBestSeen = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelSeason = new System.Windows.Forms.Label();
+            this.richTextBoxMythology = new System.Windows.Forms.RichTextBox();
+            this.labelMythology = new System.Windows.Forms.Label();
+            this.buttonAdvancedSearch = new System.Windows.Forms.Button();
+            this.labelNearbyConstellations = new System.Windows.Forms.Label();
+            this.richTextBoxNearbyConstellations = new System.Windows.Forms.RichTextBox();
+            this.textBoxFindLetter = new System.Windows.Forms.TextBox();
+            this.buttonSearchLetter = new System.Windows.Forms.Button();
+            this.buttonShowAllConstellations = new System.Windows.Forms.Button();
+            this.labelSearchByLetter = new System.Windows.Forms.Label();
+            this.labelSearchByHemisphere = new System.Windows.Forms.Label();
+            this.comboBoxSearchByHemisphere = new System.Windows.Forms.ComboBox();
+            this.buttonSearchByHemisphere = new System.Windows.Forms.Button();
+            this.labelTotalResults = new System.Windows.Forms.Label();
+            this.labelNote = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // comboBoxChooseConstellation
+            // 
+            this.comboBoxChooseConstellation.FormattingEnabled = true;
+            this.comboBoxChooseConstellation.Location = new System.Drawing.Point(10, 363);
+            this.comboBoxChooseConstellation.Name = "comboBoxChooseConstellation";
+            this.comboBoxChooseConstellation.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxChooseConstellation.TabIndex = 0;
+            this.comboBoxChooseConstellation.SelectedIndexChanged += new System.EventHandler(this.comboBoxChooseConstellation_SelectedIndexChanged);
+            // 
+            // labelChooseConstellation
+            // 
+            this.labelChooseConstellation.AutoSize = true;
+            this.labelChooseConstellation.Location = new System.Drawing.Point(10, 336);
+            this.labelChooseConstellation.Name = "labelChooseConstellation";
+            this.labelChooseConstellation.Size = new System.Drawing.Size(115, 13);
+            this.labelChooseConstellation.TabIndex = 1;
+            this.labelChooseConstellation.Text = "Choose a Constellation";
+            // 
+            // comboBoxChooseRepo
+            // 
+            this.comboBoxChooseRepo.FormattingEnabled = true;
+            this.comboBoxChooseRepo.Location = new System.Drawing.Point(10, 67);
+            this.comboBoxChooseRepo.Name = "comboBoxChooseRepo";
+            this.comboBoxChooseRepo.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxChooseRepo.TabIndex = 2;
+            // 
+            // labelChooseRepo
+            // 
+            this.labelChooseRepo.AutoSize = true;
+            this.labelChooseRepo.Location = new System.Drawing.Point(10, 40);
+            this.labelChooseRepo.Name = "labelChooseRepo";
+            this.labelChooseRepo.Size = new System.Drawing.Size(96, 13);
+            this.labelChooseRepo.TabIndex = 3;
+            this.labelChooseRepo.Text = "Choose Repository";
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Location = new System.Drawing.Point(185, 22);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(0, 13);
+            this.labelName.TabIndex = 4;
+            // 
+            // labelAbbreviation
+            // 
+            this.labelAbbreviation.AutoSize = true;
+            this.labelAbbreviation.Location = new System.Drawing.Point(24, 7);
+            this.labelAbbreviation.Name = "labelAbbreviation";
+            this.labelAbbreviation.Size = new System.Drawing.Size(61, 13);
+            this.labelAbbreviation.TabIndex = 5;
+            this.labelAbbreviation.Text = "fjkadshfksa";
+            // 
+            // labelGenitive
+            // 
+            this.labelGenitive.AutoSize = true;
+            this.labelGenitive.Location = new System.Drawing.Point(24, 34);
+            this.labelGenitive.Name = "labelGenitive";
+            this.labelGenitive.Size = new System.Drawing.Size(46, 13);
+            this.labelGenitive.TabIndex = 6;
+            this.labelGenitive.Text = "fkjhfkjas";
+            // 
+            // buttonViewStars
+            // 
+            this.buttonViewStars.Location = new System.Drawing.Point(754, 12);
+            this.buttonViewStars.Name = "buttonViewStars";
+            this.buttonViewStars.Size = new System.Drawing.Size(131, 23);
+            this.buttonViewStars.TabIndex = 7;
+            this.buttonViewStars.Text = "View Star Map Image";
+            this.buttonViewStars.UseVisualStyleBackColor = true;
+            this.buttonViewStars.Click += new System.EventHandler(this.buttonViewStars_Click);
+            // 
+            // pictureBoxImage
+            // 
+            this.pictureBoxImage.Location = new System.Drawing.Point(607, 56);
+            this.pictureBoxImage.Name = "pictureBoxImage";
+            this.pictureBoxImage.Size = new System.Drawing.Size(100, 130);
+            this.pictureBoxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxImage.TabIndex = 8;
+            this.pictureBoxImage.TabStop = false;
+            // 
+            // buttonViewMythologyImage
+            // 
+            this.buttonViewMythologyImage.Location = new System.Drawing.Point(925, 12);
+            this.buttonViewMythologyImage.Name = "buttonViewMythologyImage";
+            this.buttonViewMythologyImage.Size = new System.Drawing.Size(152, 23);
+            this.buttonViewMythologyImage.TabIndex = 9;
+            this.buttonViewMythologyImage.Text = "View Mythology Image";
+            this.buttonViewMythologyImage.UseVisualStyleBackColor = true;
+            this.buttonViewMythologyImage.Click += new System.EventHandler(this.buttonViewMythologyImage_Click);
+            // 
+            // buttonViewSkyImage
+            // 
+            this.buttonViewSkyImage.Location = new System.Drawing.Point(531, 12);
+            this.buttonViewSkyImage.Name = "buttonViewSkyImage";
+            this.buttonViewSkyImage.Size = new System.Drawing.Size(176, 23);
+            this.buttonViewSkyImage.TabIndex = 10;
+            this.buttonViewSkyImage.Text = "View Natural Sky Image";
+            this.buttonViewSkyImage.UseVisualStyleBackColor = true;
+            this.buttonViewSkyImage.Click += new System.EventHandler(this.buttonViewSkyImage_Click);
+            // 
+            // labelFamily
+            // 
+            this.labelFamily.AutoSize = true;
+            this.labelFamily.Location = new System.Drawing.Point(24, 61);
+            this.labelFamily.Name = "labelFamily";
+            this.labelFamily.Size = new System.Drawing.Size(44, 13);
+            this.labelFamily.TabIndex = 11;
+            this.labelFamily.Text = "jfklsajd\\";
+            // 
+            // labelOrigin
+            // 
+            this.labelOrigin.AutoSize = true;
+            this.labelOrigin.Location = new System.Drawing.Point(24, 88);
+            this.labelOrigin.Name = "labelOrigin";
+            this.labelOrigin.Size = new System.Drawing.Size(46, 13);
+            this.labelOrigin.TabIndex = 12;
+            this.labelOrigin.Text = "fkjhfkjsd";
+            // 
+            // labelMeaning
+            // 
+            this.labelMeaning.AutoSize = true;
+            this.labelMeaning.Location = new System.Drawing.Point(24, 115);
+            this.labelMeaning.Name = "labelMeaning";
+            this.labelMeaning.Size = new System.Drawing.Size(38, 13);
+            this.labelMeaning.TabIndex = 13;
+            this.labelMeaning.Text = "fhkjdsf";
+            // 
+            // labelBrightestStar
+            // 
+            this.labelBrightestStar.AutoSize = true;
+            this.labelBrightestStar.Location = new System.Drawing.Point(24, 142);
+            this.labelBrightestStar.Name = "labelBrightestStar";
+            this.labelBrightestStar.Size = new System.Drawing.Size(46, 13);
+            this.labelBrightestStar.TabIndex = 14;
+            this.labelBrightestStar.Text = "djkasdkj";
+            // 
+            // labelHemisphere
+            // 
+            this.labelHemisphere.AutoSize = true;
+            this.labelHemisphere.Location = new System.Drawing.Point(24, 186);
+            this.labelHemisphere.Name = "labelHemisphere";
+            this.labelHemisphere.Size = new System.Drawing.Size(55, 13);
+            this.labelHemisphere.TabIndex = 15;
+            this.labelHemisphere.Text = "hjfkashdkj";
+            // 
+            // labelBestSeen
+            // 
+            this.labelBestSeen.AutoSize = true;
+            this.labelBestSeen.Location = new System.Drawing.Point(24, 240);
+            this.labelBestSeen.Name = "labelBestSeen";
+            this.labelBestSeen.Size = new System.Drawing.Size(38, 13);
+            this.labelBestSeen.TabIndex = 16;
+            this.labelBestSeen.Text = "dhajsk";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.labelNote);
+            this.panel1.Controls.Add(this.labelSeason);
+            this.panel1.Controls.Add(this.labelAbbreviation);
+            this.panel1.Controls.Add(this.labelBestSeen);
+            this.panel1.Controls.Add(this.labelGenitive);
+            this.panel1.Controls.Add(this.labelHemisphere);
+            this.panel1.Controls.Add(this.labelFamily);
+            this.panel1.Controls.Add(this.labelBrightestStar);
+            this.panel1.Controls.Add(this.labelOrigin);
+            this.panel1.Controls.Add(this.labelMeaning);
+            this.panel1.Location = new System.Drawing.Point(158, 71);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(443, 287);
+            this.panel1.TabIndex = 17;
+            // 
+            // labelSeason
+            // 
+            this.labelSeason.AutoSize = true;
+            this.labelSeason.Location = new System.Drawing.Point(24, 213);
+            this.labelSeason.Name = "labelSeason";
+            this.labelSeason.Size = new System.Drawing.Size(51, 13);
+            this.labelSeason.TabIndex = 17;
+            this.labelSeason.Text = "bfhkdhfjk";
+            // 
+            // richTextBoxMythology
+            // 
+            this.richTextBoxMythology.Location = new System.Drawing.Point(185, 476);
+            this.richTextBoxMythology.Name = "richTextBoxMythology";
+            this.richTextBoxMythology.Size = new System.Drawing.Size(309, 196);
+            this.richTextBoxMythology.TabIndex = 18;
+            this.richTextBoxMythology.Text = "";
+            // 
+            // labelMythology
+            // 
+            this.labelMythology.AutoSize = true;
+            this.labelMythology.Location = new System.Drawing.Point(185, 451);
+            this.labelMythology.Name = "labelMythology";
+            this.labelMythology.Size = new System.Drawing.Size(55, 13);
+            this.labelMythology.TabIndex = 19;
+            this.labelMythology.Text = "Mythology";
+            // 
+            // buttonAdvancedSearch
+            // 
+            this.buttonAdvancedSearch.Location = new System.Drawing.Point(10, 425);
+            this.buttonAdvancedSearch.Name = "buttonAdvancedSearch";
+            this.buttonAdvancedSearch.Size = new System.Drawing.Size(121, 23);
+            this.buttonAdvancedSearch.TabIndex = 20;
+            this.buttonAdvancedSearch.Text = "Advanced Search";
+            this.buttonAdvancedSearch.UseVisualStyleBackColor = true;
+            this.buttonAdvancedSearch.Click += new System.EventHandler(this.buttonAdvancedSearch_Click);
+            // 
+            // labelNearbyConstellations
+            // 
+            this.labelNearbyConstellations.AutoSize = true;
+            this.labelNearbyConstellations.Location = new System.Drawing.Point(185, 361);
+            this.labelNearbyConstellations.Name = "labelNearbyConstellations";
+            this.labelNearbyConstellations.Size = new System.Drawing.Size(109, 13);
+            this.labelNearbyConstellations.TabIndex = 21;
+            this.labelNearbyConstellations.Text = "Nearby Constellations";
+            // 
+            // richTextBoxNearbyConstellations
+            // 
+            this.richTextBoxNearbyConstellations.Location = new System.Drawing.Point(185, 386);
+            this.richTextBoxNearbyConstellations.Name = "richTextBoxNearbyConstellations";
+            this.richTextBoxNearbyConstellations.Size = new System.Drawing.Size(306, 53);
+            this.richTextBoxNearbyConstellations.TabIndex = 22;
+            this.richTextBoxNearbyConstellations.Text = "";
+            // 
+            // textBoxFindLetter
+            // 
+            this.textBoxFindLetter.Location = new System.Drawing.Point(10, 129);
+            this.textBoxFindLetter.Name = "textBoxFindLetter";
+            this.textBoxFindLetter.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFindLetter.TabIndex = 23;
+            // 
+            // buttonSearchLetter
+            // 
+            this.buttonSearchLetter.Location = new System.Drawing.Point(10, 163);
+            this.buttonSearchLetter.Name = "buttonSearchLetter";
+            this.buttonSearchLetter.Size = new System.Drawing.Size(121, 23);
+            this.buttonSearchLetter.TabIndex = 24;
+            this.buttonSearchLetter.Text = "Search By Letter";
+            this.buttonSearchLetter.UseVisualStyleBackColor = true;
+            this.buttonSearchLetter.Click += new System.EventHandler(this.buttonSearchLetter_Click);
+            // 
+            // buttonShowAllConstellations
+            // 
+            this.buttonShowAllConstellations.Location = new System.Drawing.Point(10, 299);
+            this.buttonShowAllConstellations.Name = "buttonShowAllConstellations";
+            this.buttonShowAllConstellations.Size = new System.Drawing.Size(139, 23);
+            this.buttonShowAllConstellations.TabIndex = 25;
+            this.buttonShowAllConstellations.Text = "Show All Constellations";
+            this.buttonShowAllConstellations.UseVisualStyleBackColor = true;
+            this.buttonShowAllConstellations.Click += new System.EventHandler(this.buttonShowAllConstellations_Click);
+            // 
+            // labelSearchByLetter
+            // 
+            this.labelSearchByLetter.AutoSize = true;
+            this.labelSearchByLetter.Location = new System.Drawing.Point(10, 102);
+            this.labelSearchByLetter.Name = "labelSearchByLetter";
+            this.labelSearchByLetter.Size = new System.Drawing.Size(108, 13);
+            this.labelSearchByLetter.TabIndex = 26;
+            this.labelSearchByLetter.Text = "Search By First Letter";
+            // 
+            // labelSearchByHemisphere
+            // 
+            this.labelSearchByHemisphere.AutoSize = true;
+            this.labelSearchByHemisphere.Location = new System.Drawing.Point(10, 200);
+            this.labelSearchByHemisphere.Name = "labelSearchByHemisphere";
+            this.labelSearchByHemisphere.Size = new System.Drawing.Size(115, 13);
+            this.labelSearchByHemisphere.TabIndex = 27;
+            this.labelSearchByHemisphere.Text = "Search By Hemisphere";
+            // 
+            // comboBoxSearchByHemisphere
+            // 
+            this.comboBoxSearchByHemisphere.FormattingEnabled = true;
+            this.comboBoxSearchByHemisphere.Location = new System.Drawing.Point(10, 227);
+            this.comboBoxSearchByHemisphere.Name = "comboBoxSearchByHemisphere";
+            this.comboBoxSearchByHemisphere.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSearchByHemisphere.TabIndex = 28;
+            this.comboBoxSearchByHemisphere.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearchByHemisphere_SelectedIndexChanged);
+            // 
+            // buttonSearchByHemisphere
+            // 
+            this.buttonSearchByHemisphere.Location = new System.Drawing.Point(10, 262);
+            this.buttonSearchByHemisphere.Name = "buttonSearchByHemisphere";
+            this.buttonSearchByHemisphere.Size = new System.Drawing.Size(136, 23);
+            this.buttonSearchByHemisphere.TabIndex = 29;
+            this.buttonSearchByHemisphere.Text = "Search By Hemisphere";
+            this.buttonSearchByHemisphere.UseVisualStyleBackColor = true;
+            this.buttonSearchByHemisphere.Click += new System.EventHandler(this.buttonSearchByHemisphere_Click);
+            // 
+            // labelTotalResults
+            // 
+            this.labelTotalResults.AutoSize = true;
+            this.labelTotalResults.Location = new System.Drawing.Point(10, 398);
+            this.labelTotalResults.Name = "labelTotalResults";
+            this.labelTotalResults.Size = new System.Drawing.Size(69, 13);
+            this.labelTotalResults.TabIndex = 30;
+            this.labelTotalResults.Text = "Total Results";
+            // 
+            // labelNote
+            // 
+            this.labelNote.AutoSize = true;
+            this.labelNote.Location = new System.Drawing.Point(24, 265);
+            this.labelNote.Name = "labelNote";
+            this.labelNote.Size = new System.Drawing.Size(246, 13);
+            this.labelNote.TabIndex = 18;
+            this.labelNote.Text = "(Note: All constellations are best seen at 9:00 p.m.)";
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.labelTotalResults);
+            this.Controls.Add(this.buttonSearchByHemisphere);
+            this.Controls.Add(this.comboBoxSearchByHemisphere);
+            this.Controls.Add(this.labelSearchByHemisphere);
+            this.Controls.Add(this.labelSearchByLetter);
+            this.Controls.Add(this.buttonShowAllConstellations);
+            this.Controls.Add(this.buttonSearchLetter);
+            this.Controls.Add(this.textBoxFindLetter);
+            this.Controls.Add(this.richTextBoxNearbyConstellations);
+            this.Controls.Add(this.labelNearbyConstellations);
+            this.Controls.Add(this.buttonAdvancedSearch);
+            this.Controls.Add(this.labelMythology);
+            this.Controls.Add(this.richTextBoxMythology);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.buttonViewSkyImage);
+            this.Controls.Add(this.buttonViewMythologyImage);
+            this.Controls.Add(this.pictureBoxImage);
+            this.Controls.Add(this.buttonViewStars);
+            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.labelChooseRepo);
+            this.Controls.Add(this.comboBoxChooseRepo);
+            this.Controls.Add(this.labelChooseConstellation);
+            this.Controls.Add(this.comboBoxChooseConstellation);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainForm";
+            this.Text = "Constellations";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.ComboBox comboBoxChooseConstellation;
+        private System.Windows.Forms.Label labelChooseConstellation;
+        private System.Windows.Forms.Label labelChooseRepo;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelAbbreviation;
+        private System.Windows.Forms.Label labelGenitive;
+        private System.Windows.Forms.Button buttonViewStars;
+        private System.Windows.Forms.PictureBox pictureBoxImage;
+        private System.Windows.Forms.Button buttonViewMythologyImage;
+        private System.Windows.Forms.Button buttonViewSkyImage;
+        private System.Windows.Forms.Label labelFamily;
+        private System.Windows.Forms.Label labelOrigin;
+        private System.Windows.Forms.Label labelMeaning;
+        private System.Windows.Forms.Label labelBrightestStar;
+        private System.Windows.Forms.Label labelHemisphere;
+        private System.Windows.Forms.Label labelBestSeen;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label labelSeason;
+        private System.Windows.Forms.RichTextBox richTextBoxMythology;
+        private System.Windows.Forms.Label labelMythology;
+        private System.Windows.Forms.Button buttonAdvancedSearch;
+        private System.Windows.Forms.Label labelNearbyConstellations;
+        private System.Windows.Forms.RichTextBox richTextBoxNearbyConstellations;
+        private System.Windows.Forms.TextBox textBoxFindLetter;
+        private System.Windows.Forms.Button buttonSearchLetter;
+        private System.Windows.Forms.Button buttonShowAllConstellations;
+        private System.Windows.Forms.Label labelSearchByLetter;
+        private System.Windows.Forms.Label labelSearchByHemisphere;
+        private System.Windows.Forms.ComboBox comboBoxSearchByHemisphere;
+        private System.Windows.Forms.Button buttonSearchByHemisphere;
+        private System.Windows.Forms.Label labelTotalResults;
+        private System.Windows.Forms.ComboBox comboBoxChooseRepo;
+        private System.Windows.Forms.Label labelNote;
+    }
+}
