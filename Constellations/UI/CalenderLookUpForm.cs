@@ -111,6 +111,7 @@ namespace Constellations.UI
                 labelSelectMonth.Show();
                 comboBoxSelectMonth.Show();
                 comboBoxSelectMonth.SelectedIndex = -1;
+                buttonSearch.Hide();
                 listBoxResults.Hide();
                 labelTotalResults.Hide();
             }

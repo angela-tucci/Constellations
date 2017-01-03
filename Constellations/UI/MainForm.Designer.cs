@@ -47,6 +47,7 @@
             this.labelHemisphere = new System.Windows.Forms.Label();
             this.labelBestSeen = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelNote = new System.Windows.Forms.Label();
             this.labelSeason = new System.Windows.Forms.Label();
             this.richTextBoxMythology = new System.Windows.Forms.RichTextBox();
             this.labelMythology = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.comboBoxSearchByHemisphere = new System.Windows.Forms.ComboBox();
             this.buttonSearchByHemisphere = new System.Windows.Forms.Button();
             this.labelTotalResults = new System.Windows.Forms.Label();
-            this.labelNote = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -104,10 +104,11 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(185, 22);
+            this.labelName.Location = new System.Drawing.Point(180, 22);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(0, 13);
+            this.labelName.Size = new System.Drawing.Size(40, 13);
             this.labelName.TabIndex = 4;
+            this.labelName.Text = "hjhsajd";
             // 
             // labelAbbreviation
             // 
@@ -237,6 +238,15 @@
             this.panel1.Size = new System.Drawing.Size(443, 287);
             this.panel1.TabIndex = 17;
             // 
+            // labelNote
+            // 
+            this.labelNote.AutoSize = true;
+            this.labelNote.Location = new System.Drawing.Point(24, 265);
+            this.labelNote.Name = "labelNote";
+            this.labelNote.Size = new System.Drawing.Size(246, 13);
+            this.labelNote.TabIndex = 18;
+            this.labelNote.Text = "(Note: All constellations are best seen at 9:00 p.m.)";
+            // 
             // labelSeason
             // 
             this.labelSeason.AutoSize = true;
@@ -362,15 +372,6 @@
             this.labelTotalResults.Size = new System.Drawing.Size(69, 13);
             this.labelTotalResults.TabIndex = 30;
             this.labelTotalResults.Text = "Total Results";
-            // 
-            // labelNote
-            // 
-            this.labelNote.AutoSize = true;
-            this.labelNote.Location = new System.Drawing.Point(24, 265);
-            this.labelNote.Name = "labelNote";
-            this.labelNote.Size = new System.Drawing.Size(246, 13);
-            this.labelNote.TabIndex = 18;
-            this.labelNote.Text = "(Note: All constellations are best seen at 9:00 p.m.)";
             // 
             // MainForm
             // 
