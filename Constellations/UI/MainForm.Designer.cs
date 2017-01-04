@@ -130,7 +130,7 @@
             // 
             // buttonViewStars
             // 
-            this.buttonViewStars.Location = new System.Drawing.Point(754, 12);
+            this.buttonViewStars.Location = new System.Drawing.Point(830, 12);
             this.buttonViewStars.Name = "buttonViewStars";
             this.buttonViewStars.Size = new System.Drawing.Size(131, 23);
             this.buttonViewStars.TabIndex = 7;
@@ -149,7 +149,7 @@
             // 
             // buttonViewMythologyImage
             // 
-            this.buttonViewMythologyImage.Location = new System.Drawing.Point(925, 12);
+            this.buttonViewMythologyImage.Location = new System.Drawing.Point(1001, 12);
             this.buttonViewMythologyImage.Name = "buttonViewMythologyImage";
             this.buttonViewMythologyImage.Size = new System.Drawing.Size(152, 23);
             this.buttonViewMythologyImage.TabIndex = 9;
@@ -159,7 +159,7 @@
             // 
             // buttonViewSkyImage
             // 
-            this.buttonViewSkyImage.Location = new System.Drawing.Point(531, 12);
+            this.buttonViewSkyImage.Location = new System.Drawing.Point(607, 12);
             this.buttonViewSkyImage.Name = "buttonViewSkyImage";
             this.buttonViewSkyImage.Size = new System.Drawing.Size(176, 23);
             this.buttonViewSkyImage.TabIndex = 10;

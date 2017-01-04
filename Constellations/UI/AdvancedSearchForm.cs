@@ -14,11 +14,11 @@ using System.Globalization;
 
 namespace Constellations.UI
 {
-    public partial class CalenderLookUpForm : Form
+    public partial class AdvancedSearchForm : Form
     {
         private IEnumerable<Constellation> constellations;
 
-        public CalenderLookUpForm(BindingSource bsHemisphere, BindingSource bsMonth)
+        public AdvancedSearchForm(BindingSource bsHemisphere, BindingSource bsMonth)
         {
             InitializeComponent();
 
@@ -29,12 +29,16 @@ namespace Constellations.UI
             labelSelectMonth.Hide();
             comboBoxSelectMonth.Hide();
             buttonSearch.Hide();
+            groupBoxMisc.Hide();
             listBoxResults.Hide();
         }
 
         private void CalenderLookUpForm_Load(object sender, EventArgs e)
         {
             InitializeConstellations(RepoFactory.GetRepo(comboBoxChooseRepo.SelectedItem.ToString()));
+            InitializeConstellations(RepoFactory.GetRepo(comboBoxChooseRepoNearby.SelectedItem.ToString()));
+
+            InitializeComboBoxSelectConstellation();
         }
 
         private void InitializeComboBoxChooseRepo()
@@ -47,6 +51,7 @@ namespace Constellations.UI
                             select var.Name;
 
             comboBoxChooseRepo.DataSource = bs;
+            comboBoxChooseRepoNearby.DataSource = bs;
         }
 
         private void InitializeConstellations(IConstellationData info)
@@ -87,7 +92,6 @@ namespace Constellations.UI
 
                 string month = "";
                 List<string> allMonths = new List<string>();
-                bool match = false; 
 
                 foreach(Constellation constell in results)
                 {
@@ -151,12 +155,29 @@ namespace Constellations.UI
 
                 listBoxResults.DataSource = bsResults;
                 listBoxResults.SelectedIndex = -1;
+                //listViewResults = bsResults;
+                /*listViewResults.Items.Clear();
+                List<Constellation> list = new List<Constellation>();
+                foreach (string name in bsResults) {
+                    ListViewItem item = new ListViewItem();
+                    item.Text = name;
+                    for(int i = 0; i < list.Count; i++)
+                    {
+                        if (list[i].Name.Equals(name))
+                        {
+                            item.ToolTipText = list[i].Meaning;
+                            i = list.Count;
+                        }
+                    }
+                    listViewResults.Items.Add(item);
+                }*/
 
                 labelTotalResults.Text = $"Total Results: {bsResults.Count}";
                 labelTotalResults.Show();
 
                 //try to set up a tooltip when you hover over an item in the list box
                 //have it show its meaning
+                //listViewResults.ShowItemToolTips = true;
                 toolTip1.SetToolTip(listBoxResults, "Boop");
 
                 if (bsResults.Count > 0)
@@ -168,6 +189,42 @@ namespace Constellations.UI
                     MessageBox.Show("No results");
                 }
             }
+        }
+
+        private void InitializeComboBoxSelectConstellation()
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = from constell in constellations
+                            select constell.Name;
+
+            comboBoxSelectConstellation.DataSource = bs;
+
+            comboBoxSelectConstellation.SelectedIndex = -1;
+
+            buttonSearchNearby.Hide();
+        }
+
+        private void comboBoxSelectConstellation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonSearchNearby.Show();
+        }
+
+        private void buttonSearchNearby_Click(object sender, EventArgs e)
+        {
+            /*List<string> allNearbyConstellation = new List<string>();
+
+            foreach(Constellation constell in constellations)
+            {
+                string[] nearbyConstellations = constell.NearbyConstellations.Split(new[] { " - " }, StringSplitOptions.None);
+
+                foreach(string nearbyConstell in nearbyConstellations)
+                {
+                    if (nearbyConstell.Equals(comboBoxSelectConstellation.SelectedItem))
+                    {
+
+                    }
+                }
+            }*/
         }
     }
 }

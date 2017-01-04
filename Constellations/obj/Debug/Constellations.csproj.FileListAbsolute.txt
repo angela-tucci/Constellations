@@ -7,4 +7,4 @@ C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Const
 C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.exe
 C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.pdb
 C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.Properties.Resources.resources
-C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.UI.CalenderLookUpForm.resources
+C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.UI.AdvancedSearchForm.resources

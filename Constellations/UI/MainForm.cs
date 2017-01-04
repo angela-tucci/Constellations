@@ -109,6 +109,9 @@ namespace Constellations.UI
             labelMythology.Font = fontBold;
             richTextBoxNearbyConstellations.Font = font;
             richTextBoxMythology.Font = font;
+
+            richTextBoxNearbyConstellations.ReadOnly = true;
+            richTextBoxMythology.ReadOnly = true;
         }
 
         private void buttonViewSkyImage_Click(object sender, EventArgs e)
@@ -169,7 +172,7 @@ namespace Constellations.UI
                                           select constell;*/
 
 
-            CalenderLookUpForm form = new CalenderLookUpForm(bsHemisphere, bsMonth);
+            AdvancedSearchForm form = new AdvancedSearchForm(bsHemisphere, bsMonth);
             form.ShowDialog();
         }
 
@@ -213,6 +216,8 @@ namespace Constellations.UI
             {
                 MessageBox.Show("Invalid Entry");
             }
+
+            comboBoxSearchByHemisphere.SelectedIndex = -1;
         }
 
         private void buttonShowAllConstellations_Click(object sender, EventArgs e)
@@ -244,7 +249,7 @@ namespace Constellations.UI
 
         private void comboBoxSearchByHemisphere_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //textBoxFindLetter.Text = null;
         }
 
         private void buttonSearchByHemisphere_Click(object sender, EventArgs e)
@@ -258,6 +263,8 @@ namespace Constellations.UI
 
             comboBoxChooseConstellation.DataSource = bs;
             labelTotalResults.Text = $"Total Results: {bs.Count}";
+
+            textBoxFindLetter.Text = null;
         }
     }
 }
