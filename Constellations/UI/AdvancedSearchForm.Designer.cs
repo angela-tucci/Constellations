@@ -71,6 +71,7 @@
             // 
             // comboBoxSelectHemisphere
             // 
+            this.comboBoxSelectHemisphere.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectHemisphere.FormattingEnabled = true;
             this.comboBoxSelectHemisphere.Location = new System.Drawing.Point(6, 158);
             this.comboBoxSelectHemisphere.Name = "comboBoxSelectHemisphere";
@@ -80,6 +81,7 @@
             // 
             // comboBoxSelectMonth
             // 
+            this.comboBoxSelectMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectMonth.FormattingEnabled = true;
             this.comboBoxSelectMonth.Location = new System.Drawing.Point(6, 242);
             this.comboBoxSelectMonth.Name = "comboBoxSelectMonth";
@@ -108,6 +110,7 @@
             // 
             // comboBoxChooseRepo
             // 
+            this.comboBoxChooseRepo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChooseRepo.FormattingEnabled = true;
             this.comboBoxChooseRepo.Location = new System.Drawing.Point(6, 74);
             this.comboBoxChooseRepo.Name = "comboBoxChooseRepo";
@@ -135,6 +138,7 @@
             // 
             // comboBoxSelectConstellation
             // 
+            this.comboBoxSelectConstellation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectConstellation.FormattingEnabled = true;
             this.comboBoxSelectConstellation.Location = new System.Drawing.Point(28, 199);
             this.comboBoxSelectConstellation.Name = "comboBoxSelectConstellation";
@@ -153,6 +157,7 @@
             // 
             // comboBoxChooseRepoNearby
             // 
+            this.comboBoxChooseRepoNearby.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChooseRepoNearby.FormattingEnabled = true;
             this.comboBoxChooseRepoNearby.Location = new System.Drawing.Point(25, 115);
             this.comboBoxChooseRepoNearby.Name = "comboBoxChooseRepoNearby";

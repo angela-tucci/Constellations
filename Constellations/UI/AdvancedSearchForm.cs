@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+Author: Angela Tucci
+Date: 12/30/2016
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +21,7 @@ namespace Constellations.UI
 {
     public partial class AdvancedSearchForm : Form
     {
-        private IEnumerable<Constellation> constellations;
+        private IEnumerable<Constellation> constellations; //list to hold all constellations
 
         public AdvancedSearchForm(BindingSource bsHemisphere, BindingSource bsMonth)
         {

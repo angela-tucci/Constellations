@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+Author: Angela Tucci
+Date: 12/30/2016
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +13,7 @@ namespace Constellations.Data
 {
     class RepoFactory
     {
+        //method to get each type of file that can be read from
         public static IConstellationData GetRepo(string repoName)
         {
             Type repo = Type.GetType("Constellations.Data." + repoName);//gets the actual type

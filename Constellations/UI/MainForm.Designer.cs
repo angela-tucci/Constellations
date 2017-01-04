@@ -68,6 +68,7 @@
             // 
             // comboBoxChooseConstellation
             // 
+            this.comboBoxChooseConstellation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChooseConstellation.FormattingEnabled = true;
             this.comboBoxChooseConstellation.Location = new System.Drawing.Point(10, 363);
             this.comboBoxChooseConstellation.Name = "comboBoxChooseConstellation";
@@ -86,6 +87,7 @@
             // 
             // comboBoxChooseRepo
             // 
+            this.comboBoxChooseRepo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChooseRepo.FormattingEnabled = true;
             this.comboBoxChooseRepo.Location = new System.Drawing.Point(10, 67);
             this.comboBoxChooseRepo.Name = "comboBoxChooseRepo";
@@ -106,18 +108,18 @@
             this.labelName.AutoSize = true;
             this.labelName.Location = new System.Drawing.Point(180, 22);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(40, 13);
+            this.labelName.Size = new System.Drawing.Size(35, 13);
             this.labelName.TabIndex = 4;
-            this.labelName.Text = "hjhsajd";
+            this.labelName.Text = "Name";
             // 
             // labelAbbreviation
             // 
             this.labelAbbreviation.AutoSize = true;
             this.labelAbbreviation.Location = new System.Drawing.Point(24, 7);
             this.labelAbbreviation.Name = "labelAbbreviation";
-            this.labelAbbreviation.Size = new System.Drawing.Size(61, 13);
+            this.labelAbbreviation.Size = new System.Drawing.Size(66, 13);
             this.labelAbbreviation.TabIndex = 5;
-            this.labelAbbreviation.Text = "fjkadshfksa";
+            this.labelAbbreviation.Text = "Abbreviation";
             // 
             // labelGenitive
             // 
@@ -126,7 +128,7 @@
             this.labelGenitive.Name = "labelGenitive";
             this.labelGenitive.Size = new System.Drawing.Size(46, 13);
             this.labelGenitive.TabIndex = 6;
-            this.labelGenitive.Text = "fkjhfkjas";
+            this.labelGenitive.Text = "Genitive";
             // 
             // buttonViewStars
             // 
@@ -172,54 +174,54 @@
             this.labelFamily.AutoSize = true;
             this.labelFamily.Location = new System.Drawing.Point(24, 61);
             this.labelFamily.Name = "labelFamily";
-            this.labelFamily.Size = new System.Drawing.Size(44, 13);
+            this.labelFamily.Size = new System.Drawing.Size(36, 13);
             this.labelFamily.TabIndex = 11;
-            this.labelFamily.Text = "jfklsajd\\";
+            this.labelFamily.Text = "Family";
             // 
             // labelOrigin
             // 
             this.labelOrigin.AutoSize = true;
             this.labelOrigin.Location = new System.Drawing.Point(24, 88);
             this.labelOrigin.Name = "labelOrigin";
-            this.labelOrigin.Size = new System.Drawing.Size(46, 13);
+            this.labelOrigin.Size = new System.Drawing.Size(34, 13);
             this.labelOrigin.TabIndex = 12;
-            this.labelOrigin.Text = "fkjhfkjsd";
+            this.labelOrigin.Text = "Origin";
             // 
             // labelMeaning
             // 
             this.labelMeaning.AutoSize = true;
             this.labelMeaning.Location = new System.Drawing.Point(24, 115);
             this.labelMeaning.Name = "labelMeaning";
-            this.labelMeaning.Size = new System.Drawing.Size(38, 13);
+            this.labelMeaning.Size = new System.Drawing.Size(48, 13);
             this.labelMeaning.TabIndex = 13;
-            this.labelMeaning.Text = "fhkjdsf";
+            this.labelMeaning.Text = "Meaning";
             // 
             // labelBrightestStar
             // 
             this.labelBrightestStar.AutoSize = true;
             this.labelBrightestStar.Location = new System.Drawing.Point(24, 142);
             this.labelBrightestStar.Name = "labelBrightestStar";
-            this.labelBrightestStar.Size = new System.Drawing.Size(46, 13);
+            this.labelBrightestStar.Size = new System.Drawing.Size(70, 13);
             this.labelBrightestStar.TabIndex = 14;
-            this.labelBrightestStar.Text = "djkasdkj";
+            this.labelBrightestStar.Text = "Brightest Star";
             // 
             // labelHemisphere
             // 
             this.labelHemisphere.AutoSize = true;
             this.labelHemisphere.Location = new System.Drawing.Point(24, 186);
             this.labelHemisphere.Name = "labelHemisphere";
-            this.labelHemisphere.Size = new System.Drawing.Size(55, 13);
+            this.labelHemisphere.Size = new System.Drawing.Size(63, 13);
             this.labelHemisphere.TabIndex = 15;
-            this.labelHemisphere.Text = "hjfkashdkj";
+            this.labelHemisphere.Text = "Hemisphere";
             // 
             // labelBestSeen
             // 
             this.labelBestSeen.AutoSize = true;
             this.labelBestSeen.Location = new System.Drawing.Point(24, 240);
             this.labelBestSeen.Name = "labelBestSeen";
-            this.labelBestSeen.Size = new System.Drawing.Size(38, 13);
+            this.labelBestSeen.Size = new System.Drawing.Size(56, 13);
             this.labelBestSeen.TabIndex = 16;
-            this.labelBestSeen.Text = "dhajsk";
+            this.labelBestSeen.Text = "Best Seen";
             // 
             // panel1
             // 
@@ -252,9 +254,9 @@
             this.labelSeason.AutoSize = true;
             this.labelSeason.Location = new System.Drawing.Point(24, 213);
             this.labelSeason.Name = "labelSeason";
-            this.labelSeason.Size = new System.Drawing.Size(51, 13);
+            this.labelSeason.Size = new System.Drawing.Size(43, 13);
             this.labelSeason.TabIndex = 17;
-            this.labelSeason.Text = "bfhkdhfjk";
+            this.labelSeason.Text = "Season";
             // 
             // richTextBoxMythology
             // 
@@ -347,6 +349,7 @@
             // 
             // comboBoxSearchByHemisphere
             // 
+            this.comboBoxSearchByHemisphere.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSearchByHemisphere.FormattingEnabled = true;
             this.comboBoxSearchByHemisphere.Location = new System.Drawing.Point(10, 227);
             this.comboBoxSearchByHemisphere.Name = "comboBoxSearchByHemisphere";

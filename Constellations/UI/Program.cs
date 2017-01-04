@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+Author: Angela Tucci
+Date: 12/30/2016
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +16,7 @@ namespace Constellations.UI
     {
         static void Main(string[] args)
         {
-            Application.Run(new MainForm());
+            Application.Run(new MainForm()); //run the main form
         }
     }
 }
