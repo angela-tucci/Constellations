@@ -96,39 +96,16 @@ namespace Constellations.UI
                 //variable to hold the selected item
                 string hemisphere = comboBoxSelectHemisphere.SelectedItem.ToString();
 
-                //create a list of the constellations to iterate through
-                List<Constellation> list = constellations.ToList();
-                //create an empty list to hold the results
-                List<Constellation> results = new List<Constellation>();
+                //create an IEnumerable that contains all the constellations with the selected hemisphere
+                var results = from constell in constellations
+                              where constell.Hemisphere.Equals(hemisphere)
+                              select constell;
 
-                //for each constellation...
-                foreach(Constellation constell in list)
-                {
-                    //if the constellation's hemisphere matches the selected hemisphere...
-                    if (constell.Hemisphere.Equals(hemisphere))
-                    {
-                        //add it to the list
-                        results.Add(constell);
-                    }
-                }
-
-                //variable to hold the current constellation's month
-                string month = "";
-                //create a list to hold all months
-                List<string> allMonths = new List<string>();
-
-                //for each constellation that matches the selected hemisphere...
-                foreach(Constellation constell in results)
-                {
-                    //set the month variable for the current constellation
-                    month = constell.BestSeen;
-                    //if the month isn't already in the list...
-                    if (!allMonths.Contains(month))
-                    {
-                        //add it to the list
-                        allMonths.Add(month);
-                    }
-                }
+                //create an IEnumerable that contains each unique month from the results
+                var allMonths = from constell in results
+                                group constell by constell.BestSeen
+                                into c
+                                select c.First().BestSeen;
 
                 //create an IEnumerable of sorted months
                 var sortedMonths = allMonths
