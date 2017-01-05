@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Constellations.Data.ConstellationCSV" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\ConstellationCSV.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Constellations.Data.RepoFactory" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\RepoFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Constellations.Model.Constellation" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAZARADRQCQgBAAAAABAUCAFIAAMAAAAAMAAgABAQ=</HashCode>
+      <FileName>Model\Constellation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Constellations.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Constellations.UI.AdvancedSearchForm" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAAAAgFAbAAEAIkBICxAAASAAAqQEFABCAyABIgAgE=</HashCode>
+      <FileName>UI\AdvancedSearchForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Constellations.UI.MainForm" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>APBEAAIEgKBCADIkCUSREgAjDEAMgxjABACgEYArQoE=</HashCode>
+      <FileName>UI\MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Constellations.UI.Program" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>UI\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Constellations.Data.IConstellationData" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\IConstellationData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

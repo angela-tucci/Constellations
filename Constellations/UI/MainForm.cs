@@ -34,12 +34,12 @@ namespace Constellations.UI
             //set the form to be maximized on any resolution
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 
-            //set up comboBoxRepo
+            //set up all combo boxes
             InitializeComboBoxRepo();
-            //set up comboBoxName with the names of all the contellations from the selected repo
             InitializeComboBoxName(RepoFactory.GetRepo(comboBoxChooseRepo.SelectedItem.ToString()));
-            //set up the comboBoxSearchByHemisphere
             InitializeComboBoxSearchByHemisphere();
+            InitializeComboBoxSearchByFamily();
+            InitializeComboBoxSearchByOrigin();
         }
 
         //method to set up the repository combo box
@@ -100,15 +100,15 @@ namespace Constellations.UI
                 if(labelName.Text == list[i].Name)
                 {
                     //set all of the labels to display information about the constellation
-                    labelAbbreviation.Text = "Abbreviation: " + list[i].Abbreviation;
-                    labelGenitive.Text = "Genitive: " + list[i].Genitive;
-                    labelFamily.Text = "Family: " + list[i].Family;
-                    labelOrigin.Text = "Origin: " + list[i].Origin;
-                    labelMeaning.Text = "Meaning: " + list[i].Meaning;
-                    labelBrightestStar.Text = "Brightest Star: " + list[i].BrightestStar;
-                    labelHemisphere.Text = "Hemisphere: " + list[i].Hemisphere;
-                    labelSeason.Text = "Season: " + list[i].Season;
-                    labelBestSeen.Text = "Best Seen: " + list[i].BestSeen;
+                    labelAbbreviation.Text = $"Abbreviation: {list[i].Abbreviation}";
+                    labelGenitive.Text = $"Genitive: {list[i].Genitive}";
+                    labelFamily.Text = $"Family: {list[i].Family}";
+                    labelOrigin.Text = $"Origin: {list[i].Origin}";
+                    labelMeaning.Text = $"Meaning: {list[i].Meaning}";
+                    labelBrightestStar.Text = $"Brightest Star: {list[i].BrightestStar}";
+                    labelHemisphere.Text = $"Hemisphere: {list[i].Hemisphere}";
+                    labelSeason.Text = $"Season: {list[i].Season}";
+                    labelBestSeen.Text = $"Best Seen: {list[i].BestSeen}";
                     richTextBoxNearbyConstellations.Text = list[i].NearbyConstellations;
                     richTextBoxMythology.Text = list[i].Mythology;
                     //set pictureBoxImage to show the natural sky image from that constellation
@@ -120,10 +120,6 @@ namespace Constellations.UI
             }
             //call method to set fonts and other styles for all labels and rich text boxes
             SetFontStyles();
-
-            //set the rich text boxes to be read only so the user can't type in the boxes
-            richTextBoxNearbyConstellations.ReadOnly = true;
-            richTextBoxMythology.ReadOnly = true;
         }
 
         //method to set up font styles for each label/rich text box
@@ -291,8 +287,10 @@ namespace Constellations.UI
                 MessageBox.Show("Invalid Entry");
             }
 
-            //change the selected index of the comboBoxSearchByHemisphere
+            //reset all searches
             comboBoxSearchByHemisphere.SelectedIndex = -1;
+            comboBoxSearchByFamily.SelectedIndex = -1;
+            comboBoxSearchByOrigin.SelectedIndex = -1;
         }
 
         //method for when the user clicks the Show All Constellations button
@@ -305,9 +303,11 @@ namespace Constellations.UI
             //set the comboBoxChooseConstellation data source to the binding source
             comboBoxChooseConstellation.DataSource = bs;
 
-            //reset the textBoxFindLetter and comboBoxSearchByHemisphere
+            //reset all searches
             textBoxFindLetter.Text = "";
             comboBoxSearchByHemisphere.SelectedIndex = -1;
+            comboBoxSearchByFamily.SelectedIndex = -1;
+            comboBoxSearchByOrigin.SelectedIndex = -1;
 
             //reset the total results label
             labelTotalResults.Text = $"Total Results: {bs.Count}";
@@ -317,12 +317,12 @@ namespace Constellations.UI
         private void InitializeComboBoxSearchByHemisphere()
         {
             //create a list of the constellations
-            List<Constellation> list = constellations.ToList();
+            //List<Constellation> list = constellations.ToList();
 
             //create a new binding source
             BindingSource bs = new BindingSource();
             //set its data source to contain each unique hemisphere
-            bs.DataSource = from constell in list                   //for each constellation
+            bs.DataSource = from constell in constellations         //for each constellation
                             group constell by constell.Hemisphere   //group the constellations by hemispheres
                             into c
                             select c.First().Hemisphere;            //select the first instance of each unique hemisphere
@@ -332,11 +332,6 @@ namespace Constellations.UI
 
             //set the first cell on load to be empty
             comboBoxSearchByHemisphere.SelectedIndex = -1; 
-        }
-
-        private void comboBoxSearchByHemisphere_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
 
         //method for when the user clicks the Search By Hemisphere button
@@ -358,8 +353,104 @@ namespace Constellations.UI
             //update the total results label
             labelTotalResults.Text = $"Total Results: {bs.Count}";
 
-            //reset the text box for searching by letter
+            //reset all other searches
             textBoxFindLetter.Text = null;
+            comboBoxSearchByOrigin.SelectedIndex = -1;
+            comboBoxSearchByFamily.SelectedIndex = -1;
+        }
+
+        //method to set up the search by family combo box
+        private void InitializeComboBoxSearchByFamily()
+        {
+            //create a binding source
+            BindingSource bs = new BindingSource();
+            //create an IEnumerable that holds each unique family
+            var datasource = from constell in constellations
+                             group constell by constell.Family
+                             into c
+                             select c.First().Family;
+
+            //set the data source to a sorted list of the families
+            bs.DataSource = from family in datasource
+                            orderby family ascending
+                            select family;
+
+            comboBoxSearchByFamily.DataSource = bs;
+
+            //set the initial index
+            comboBoxSearchByFamily.SelectedIndex = -1;
+        }
+
+        //method for when the user clicks the Search By Family button
+        private void buttonSearchByFamily_Click(object sender, EventArgs e)
+        {
+            //variable to hold the selected family
+            string family = comboBoxSearchByFamily.SelectedItem.ToString();
+
+            //create a new binding source
+            BindingSource bs = new BindingSource();
+            //set the data source to be the same of each constellation with the matching family
+            bs.DataSource = from constell in constellations
+                            where constell.Family.Equals(family)
+                            select constell.Name;
+
+            //set the combo box data source to the binding source
+            comboBoxChooseConstellation.DataSource = bs;
+
+            //reset the total results label
+            labelTotalResults.Text = $"Total Results: {bs.Count}";
+
+            //reset all other searches
+            comboBoxSearchByHemisphere.SelectedIndex = -1;
+            comboBoxSearchByOrigin.SelectedIndex = -1;
+            textBoxFindLetter.Text = null;
+        }
+
+        //method to set up the origin combo box
+        private void InitializeComboBoxSearchByOrigin()
+        {
+            //create a binding source
+            BindingSource bs = new BindingSource();
+            //create an IEnumberable that holds each unique origin
+            var datasource = from constell in constellations
+                             group constell by constell.Origin
+                             into c
+                             select c.First().Origin;
+
+            //set the data source to a sorted list of origins
+            bs.DataSource = from origin in datasource
+                            orderby origin ascending
+                            select origin;
+
+            comboBoxSearchByOrigin.DataSource = bs;
+
+            //set the initial selected index
+            comboBoxSearchByOrigin.SelectedIndex = -1;
+        }
+
+        //method for when the user clicks the Search By Origin button
+        private void buttonSearchByOrigin_Click(object sender, EventArgs e)
+        {
+            //variable to hold the selected origin
+            string origin = comboBoxSearchByOrigin.SelectedItem.ToString();
+
+            //create a new binding source
+            BindingSource bs = new BindingSource();
+            //set the data source to all matching constellation names
+            bs.DataSource = from constell in constellations
+                            where constell.Origin.Equals(origin)
+                            select constell.Name;
+
+            //set the binding source to the combo box
+            comboBoxChooseConstellation.DataSource = bs;
+
+            //reset the total results label
+            labelTotalResults.Text = $"Total Results: {bs.Count}";
+
+            //reset all other searches
+            textBoxFindLetter.Text = null;
+            comboBoxSearchByHemisphere.SelectedIndex = -1;
+            comboBoxSearchByFamily.SelectedIndex = -1;
         }
     }
 }

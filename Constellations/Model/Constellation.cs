@@ -175,7 +175,7 @@ namespace Constellations.Model
 
         public void SetState(string constellationInfo)
         {
-            string[] data = constellationInfo.Split(',');
+            string[] data = constellationInfo.Split('@');
             Name = data[0];
             Abbreviation = data[1];
             Genitive = data[2];

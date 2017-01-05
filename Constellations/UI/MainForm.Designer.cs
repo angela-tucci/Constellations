@@ -62,6 +62,12 @@
             this.comboBoxSearchByHemisphere = new System.Windows.Forms.ComboBox();
             this.buttonSearchByHemisphere = new System.Windows.Forms.Button();
             this.labelTotalResults = new System.Windows.Forms.Label();
+            this.labelSearchByFamily = new System.Windows.Forms.Label();
+            this.comboBoxSearchByFamily = new System.Windows.Forms.ComboBox();
+            this.buttonSearchByFamily = new System.Windows.Forms.Button();
+            this.labelSearchByOrigin = new System.Windows.Forms.Label();
+            this.comboBoxSearchByOrigin = new System.Windows.Forms.ComboBox();
+            this.buttonSearchByOrigin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +76,7 @@
             // 
             this.comboBoxChooseConstellation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChooseConstellation.FormattingEnabled = true;
-            this.comboBoxChooseConstellation.Location = new System.Drawing.Point(10, 363);
+            this.comboBoxChooseConstellation.Location = new System.Drawing.Point(12, 511);
             this.comboBoxChooseConstellation.Name = "comboBoxChooseConstellation";
             this.comboBoxChooseConstellation.Size = new System.Drawing.Size(121, 21);
             this.comboBoxChooseConstellation.TabIndex = 0;
@@ -79,7 +85,7 @@
             // labelChooseConstellation
             // 
             this.labelChooseConstellation.AutoSize = true;
-            this.labelChooseConstellation.Location = new System.Drawing.Point(10, 336);
+            this.labelChooseConstellation.Location = new System.Drawing.Point(12, 486);
             this.labelChooseConstellation.Name = "labelChooseConstellation";
             this.labelChooseConstellation.Size = new System.Drawing.Size(115, 13);
             this.labelChooseConstellation.TabIndex = 1;
@@ -89,7 +95,7 @@
             // 
             this.comboBoxChooseRepo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChooseRepo.FormattingEnabled = true;
-            this.comboBoxChooseRepo.Location = new System.Drawing.Point(10, 67);
+            this.comboBoxChooseRepo.Location = new System.Drawing.Point(12, 47);
             this.comboBoxChooseRepo.Name = "comboBoxChooseRepo";
             this.comboBoxChooseRepo.Size = new System.Drawing.Size(121, 21);
             this.comboBoxChooseRepo.TabIndex = 2;
@@ -97,7 +103,7 @@
             // labelChooseRepo
             // 
             this.labelChooseRepo.AutoSize = true;
-            this.labelChooseRepo.Location = new System.Drawing.Point(10, 40);
+            this.labelChooseRepo.Location = new System.Drawing.Point(12, 22);
             this.labelChooseRepo.Name = "labelChooseRepo";
             this.labelChooseRepo.Size = new System.Drawing.Size(96, 13);
             this.labelChooseRepo.TabIndex = 3;
@@ -106,7 +112,7 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(180, 22);
+            this.labelName.Location = new System.Drawing.Point(204, 22);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(35, 13);
             this.labelName.TabIndex = 4;
@@ -235,9 +241,9 @@
             this.panel1.Controls.Add(this.labelBrightestStar);
             this.panel1.Controls.Add(this.labelOrigin);
             this.panel1.Controls.Add(this.labelMeaning);
-            this.panel1.Location = new System.Drawing.Point(158, 71);
+            this.panel1.Location = new System.Drawing.Point(181, 71);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(443, 287);
+            this.panel1.Size = new System.Drawing.Size(421, 287);
             this.panel1.TabIndex = 17;
             // 
             // labelNote
@@ -260,8 +266,9 @@
             // 
             // richTextBoxMythology
             // 
-            this.richTextBoxMythology.Location = new System.Drawing.Point(185, 476);
+            this.richTextBoxMythology.Location = new System.Drawing.Point(208, 476);
             this.richTextBoxMythology.Name = "richTextBoxMythology";
+            this.richTextBoxMythology.ReadOnly = true;
             this.richTextBoxMythology.Size = new System.Drawing.Size(309, 196);
             this.richTextBoxMythology.TabIndex = 18;
             this.richTextBoxMythology.Text = "";
@@ -269,7 +276,7 @@
             // labelMythology
             // 
             this.labelMythology.AutoSize = true;
-            this.labelMythology.Location = new System.Drawing.Point(185, 451);
+            this.labelMythology.Location = new System.Drawing.Point(208, 451);
             this.labelMythology.Name = "labelMythology";
             this.labelMythology.Size = new System.Drawing.Size(55, 13);
             this.labelMythology.TabIndex = 19;
@@ -277,7 +284,7 @@
             // 
             // buttonAdvancedSearch
             // 
-            this.buttonAdvancedSearch.Location = new System.Drawing.Point(10, 425);
+            this.buttonAdvancedSearch.Location = new System.Drawing.Point(12, 569);
             this.buttonAdvancedSearch.Name = "buttonAdvancedSearch";
             this.buttonAdvancedSearch.Size = new System.Drawing.Size(121, 23);
             this.buttonAdvancedSearch.TabIndex = 20;
@@ -288,7 +295,7 @@
             // labelNearbyConstellations
             // 
             this.labelNearbyConstellations.AutoSize = true;
-            this.labelNearbyConstellations.Location = new System.Drawing.Point(185, 361);
+            this.labelNearbyConstellations.Location = new System.Drawing.Point(208, 361);
             this.labelNearbyConstellations.Name = "labelNearbyConstellations";
             this.labelNearbyConstellations.Size = new System.Drawing.Size(109, 13);
             this.labelNearbyConstellations.TabIndex = 21;
@@ -296,22 +303,23 @@
             // 
             // richTextBoxNearbyConstellations
             // 
-            this.richTextBoxNearbyConstellations.Location = new System.Drawing.Point(185, 386);
+            this.richTextBoxNearbyConstellations.Location = new System.Drawing.Point(208, 386);
             this.richTextBoxNearbyConstellations.Name = "richTextBoxNearbyConstellations";
+            this.richTextBoxNearbyConstellations.ReadOnly = true;
             this.richTextBoxNearbyConstellations.Size = new System.Drawing.Size(306, 53);
             this.richTextBoxNearbyConstellations.TabIndex = 22;
             this.richTextBoxNearbyConstellations.Text = "";
             // 
             // textBoxFindLetter
             // 
-            this.textBoxFindLetter.Location = new System.Drawing.Point(10, 129);
+            this.textBoxFindLetter.Location = new System.Drawing.Point(12, 105);
             this.textBoxFindLetter.Name = "textBoxFindLetter";
             this.textBoxFindLetter.Size = new System.Drawing.Size(100, 20);
             this.textBoxFindLetter.TabIndex = 23;
             // 
             // buttonSearchLetter
             // 
-            this.buttonSearchLetter.Location = new System.Drawing.Point(10, 163);
+            this.buttonSearchLetter.Location = new System.Drawing.Point(12, 137);
             this.buttonSearchLetter.Name = "buttonSearchLetter";
             this.buttonSearchLetter.Size = new System.Drawing.Size(121, 23);
             this.buttonSearchLetter.TabIndex = 24;
@@ -321,7 +329,7 @@
             // 
             // buttonShowAllConstellations
             // 
-            this.buttonShowAllConstellations.Location = new System.Drawing.Point(10, 299);
+            this.buttonShowAllConstellations.Location = new System.Drawing.Point(12, 451);
             this.buttonShowAllConstellations.Name = "buttonShowAllConstellations";
             this.buttonShowAllConstellations.Size = new System.Drawing.Size(139, 23);
             this.buttonShowAllConstellations.TabIndex = 25;
@@ -332,7 +340,7 @@
             // labelSearchByLetter
             // 
             this.labelSearchByLetter.AutoSize = true;
-            this.labelSearchByLetter.Location = new System.Drawing.Point(10, 102);
+            this.labelSearchByLetter.Location = new System.Drawing.Point(12, 80);
             this.labelSearchByLetter.Name = "labelSearchByLetter";
             this.labelSearchByLetter.Size = new System.Drawing.Size(108, 13);
             this.labelSearchByLetter.TabIndex = 26;
@@ -341,7 +349,7 @@
             // labelSearchByHemisphere
             // 
             this.labelSearchByHemisphere.AutoSize = true;
-            this.labelSearchByHemisphere.Location = new System.Drawing.Point(10, 200);
+            this.labelSearchByHemisphere.Location = new System.Drawing.Point(12, 172);
             this.labelSearchByHemisphere.Name = "labelSearchByHemisphere";
             this.labelSearchByHemisphere.Size = new System.Drawing.Size(115, 13);
             this.labelSearchByHemisphere.TabIndex = 27;
@@ -351,15 +359,14 @@
             // 
             this.comboBoxSearchByHemisphere.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSearchByHemisphere.FormattingEnabled = true;
-            this.comboBoxSearchByHemisphere.Location = new System.Drawing.Point(10, 227);
+            this.comboBoxSearchByHemisphere.Location = new System.Drawing.Point(12, 197);
             this.comboBoxSearchByHemisphere.Name = "comboBoxSearchByHemisphere";
             this.comboBoxSearchByHemisphere.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSearchByHemisphere.TabIndex = 28;
-            this.comboBoxSearchByHemisphere.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearchByHemisphere_SelectedIndexChanged);
             // 
             // buttonSearchByHemisphere
             // 
-            this.buttonSearchByHemisphere.Location = new System.Drawing.Point(10, 262);
+            this.buttonSearchByHemisphere.Location = new System.Drawing.Point(12, 230);
             this.buttonSearchByHemisphere.Name = "buttonSearchByHemisphere";
             this.buttonSearchByHemisphere.Size = new System.Drawing.Size(136, 23);
             this.buttonSearchByHemisphere.TabIndex = 29;
@@ -370,11 +377,67 @@
             // labelTotalResults
             // 
             this.labelTotalResults.AutoSize = true;
-            this.labelTotalResults.Location = new System.Drawing.Point(10, 398);
+            this.labelTotalResults.Location = new System.Drawing.Point(12, 544);
             this.labelTotalResults.Name = "labelTotalResults";
             this.labelTotalResults.Size = new System.Drawing.Size(69, 13);
             this.labelTotalResults.TabIndex = 30;
             this.labelTotalResults.Text = "Total Results";
+            // 
+            // labelSearchByFamily
+            // 
+            this.labelSearchByFamily.AutoSize = true;
+            this.labelSearchByFamily.Location = new System.Drawing.Point(12, 265);
+            this.labelSearchByFamily.Name = "labelSearchByFamily";
+            this.labelSearchByFamily.Size = new System.Drawing.Size(88, 13);
+            this.labelSearchByFamily.TabIndex = 31;
+            this.labelSearchByFamily.Text = "Search By Family";
+            // 
+            // comboBoxSearchByFamily
+            // 
+            this.comboBoxSearchByFamily.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSearchByFamily.FormattingEnabled = true;
+            this.comboBoxSearchByFamily.Location = new System.Drawing.Point(12, 290);
+            this.comboBoxSearchByFamily.Name = "comboBoxSearchByFamily";
+            this.comboBoxSearchByFamily.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSearchByFamily.TabIndex = 32;
+            // 
+            // buttonSearchByFamily
+            // 
+            this.buttonSearchByFamily.Location = new System.Drawing.Point(12, 323);
+            this.buttonSearchByFamily.Name = "buttonSearchByFamily";
+            this.buttonSearchByFamily.Size = new System.Drawing.Size(115, 23);
+            this.buttonSearchByFamily.TabIndex = 33;
+            this.buttonSearchByFamily.Text = "Search By Family";
+            this.buttonSearchByFamily.UseVisualStyleBackColor = true;
+            this.buttonSearchByFamily.Click += new System.EventHandler(this.buttonSearchByFamily_Click);
+            // 
+            // labelSearchByOrigin
+            // 
+            this.labelSearchByOrigin.AutoSize = true;
+            this.labelSearchByOrigin.Location = new System.Drawing.Point(12, 358);
+            this.labelSearchByOrigin.Name = "labelSearchByOrigin";
+            this.labelSearchByOrigin.Size = new System.Drawing.Size(86, 13);
+            this.labelSearchByOrigin.TabIndex = 34;
+            this.labelSearchByOrigin.Text = "Search By Origin";
+            // 
+            // comboBoxSearchByOrigin
+            // 
+            this.comboBoxSearchByOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSearchByOrigin.FormattingEnabled = true;
+            this.comboBoxSearchByOrigin.Location = new System.Drawing.Point(12, 383);
+            this.comboBoxSearchByOrigin.Name = "comboBoxSearchByOrigin";
+            this.comboBoxSearchByOrigin.Size = new System.Drawing.Size(167, 21);
+            this.comboBoxSearchByOrigin.TabIndex = 35;
+            // 
+            // buttonSearchByOrigin
+            // 
+            this.buttonSearchByOrigin.Location = new System.Drawing.Point(12, 416);
+            this.buttonSearchByOrigin.Name = "buttonSearchByOrigin";
+            this.buttonSearchByOrigin.Size = new System.Drawing.Size(115, 23);
+            this.buttonSearchByOrigin.TabIndex = 36;
+            this.buttonSearchByOrigin.Text = "Search By Origin";
+            this.buttonSearchByOrigin.UseVisualStyleBackColor = true;
+            this.buttonSearchByOrigin.Click += new System.EventHandler(this.buttonSearchByOrigin_Click);
             // 
             // MainForm
             // 
@@ -383,6 +446,12 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.buttonSearchByOrigin);
+            this.Controls.Add(this.comboBoxSearchByOrigin);
+            this.Controls.Add(this.labelSearchByOrigin);
+            this.Controls.Add(this.buttonSearchByFamily);
+            this.Controls.Add(this.comboBoxSearchByFamily);
+            this.Controls.Add(this.labelSearchByFamily);
             this.Controls.Add(this.labelTotalResults);
             this.Controls.Add(this.buttonSearchByHemisphere);
             this.Controls.Add(this.comboBoxSearchByHemisphere);
@@ -453,5 +522,11 @@
         private System.Windows.Forms.Label labelTotalResults;
         private System.Windows.Forms.ComboBox comboBoxChooseRepo;
         private System.Windows.Forms.Label labelNote;
+        private System.Windows.Forms.Label labelSearchByFamily;
+        private System.Windows.Forms.ComboBox comboBoxSearchByFamily;
+        private System.Windows.Forms.Button buttonSearchByFamily;
+        private System.Windows.Forms.Label labelSearchByOrigin;
+        private System.Windows.Forms.ComboBox comboBoxSearchByOrigin;
+        private System.Windows.Forms.Button buttonSearchByOrigin;
     }
 }
