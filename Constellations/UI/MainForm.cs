@@ -211,18 +211,18 @@ namespace Constellations.UI
             //create a new binding source
             BindingSource bsHemisphere = new BindingSource();
             //set its data source to contain each hemisphere in the list
-            bsHemisphere.DataSource = from constell in constellations       //for each constellation
-                                      group constell by constell.Hemisphere //group the constellations by hemisphere
+            bsHemisphere.DataSource = from constell in constellations       
+                                      group constell by constell.Hemisphere 
                                       into c
-                                      select c.First().Hemisphere;          //select the first instance of each unique hemisphere
+                                      select c.First().Hemisphere;          
 
             //create a new binding source
             BindingSource bsMonth = new BindingSource();
             //set its data source to contain each best seen option (month) in the list
-            bsMonth.DataSource = from constell in constellations     //for each constellation
-                                 group constell by constell.BestSeen //group the constellations by best seen
+            bsMonth.DataSource = from constell in constellations     
+                                 group constell by constell.BestSeen 
                                  into c
-                                 select c.First().BestSeen;          //select the first instance of each unique best seen option
+                                 select c.First().BestSeen;          
 
             //create and display the advanced search form
             AdvancedSearchForm form = new AdvancedSearchForm(bsHemisphere, bsMonth);
@@ -322,10 +322,10 @@ namespace Constellations.UI
             //create a new binding source
             BindingSource bs = new BindingSource();
             //set its data source to contain each unique hemisphere
-            bs.DataSource = from constell in constellations         //for each constellation
-                            group constell by constell.Hemisphere   //group the constellations by hemispheres
+            bs.DataSource = from constell in constellations         
+                            group constell by constell.Hemisphere   
                             into c
-                            select c.First().Hemisphere;            //select the first instance of each unique hemisphere
+                            select c.First().Hemisphere;            
 
             //set the combo box data source to the binding source
             comboBoxSearchByHemisphere.DataSource = bs;
@@ -337,26 +337,30 @@ namespace Constellations.UI
         //method for when the user clicks the Search By Hemisphere button
         private void buttonSearchByHemisphere_Click(object sender, EventArgs e)
         {
-            //set the selected item in the combo box to a variable
-            string hemisphere = comboBoxSearchByHemisphere.SelectedItem.ToString();
+            //make sure an item has been selected in the combo box
+            if (comboBoxSearchByHemisphere.SelectedIndex != -1)
+            {
+                //set the selected item in the combo box to a variable
+                string hemisphere = comboBoxSearchByHemisphere.SelectedItem.ToString();
 
-            //create a new binding source
-            BindingSource bs = new BindingSource();
-            //set its data source to contain each contellation name that's in the selected hemisphere
-            bs.DataSource = from constell in constellations              //for each constellation
-                            where constell.Hemisphere.Equals(hemisphere) //that contains the selected hemisphere
-                            select constell.Name;                        //select that constellation's name
+                //create a new binding source
+                BindingSource bs = new BindingSource();
+                //set its data source to contain each contellation name that's in the selected hemisphere
+                bs.DataSource = from constell in constellations              
+                                where constell.Hemisphere.Equals(hemisphere) 
+                                select constell.Name;                        
 
-            //set the combo box data source to the binding source
-            comboBoxChooseConstellation.DataSource = bs;
+                //set the combo box data source to the binding source
+                comboBoxChooseConstellation.DataSource = bs;
 
-            //update the total results label
-            labelTotalResults.Text = $"Total Results: {bs.Count}";
+                //update the total results label
+                labelTotalResults.Text = $"Total Results: {bs.Count}";
 
-            //reset all other searches
-            textBoxFindLetter.Text = null;
-            comboBoxSearchByOrigin.SelectedIndex = -1;
-            comboBoxSearchByFamily.SelectedIndex = -1;
+                //reset all other searches
+                textBoxFindLetter.Text = null;
+                comboBoxSearchByOrigin.SelectedIndex = -1;
+                comboBoxSearchByFamily.SelectedIndex = -1;
+            }
         }
 
         //method to set up the search by family combo box
@@ -384,26 +388,30 @@ namespace Constellations.UI
         //method for when the user clicks the Search By Family button
         private void buttonSearchByFamily_Click(object sender, EventArgs e)
         {
-            //variable to hold the selected family
-            string family = comboBoxSearchByFamily.SelectedItem.ToString();
+            //make sure an item has been selected in the combo box
+            if (comboBoxSearchByFamily.SelectedIndex != -1)
+            {
+                //variable to hold the selected family
+                string family = comboBoxSearchByFamily.SelectedItem.ToString();
 
-            //create a new binding source
-            BindingSource bs = new BindingSource();
-            //set the data source to be the same of each constellation with the matching family
-            bs.DataSource = from constell in constellations
-                            where constell.Family.Equals(family)
-                            select constell.Name;
+                //create a new binding source
+                BindingSource bs = new BindingSource();
+                //set the data source to be the same of each constellation with the matching family
+                bs.DataSource = from constell in constellations
+                                where constell.Family.Equals(family)
+                                select constell.Name;
 
-            //set the combo box data source to the binding source
-            comboBoxChooseConstellation.DataSource = bs;
+                //set the combo box data source to the binding source
+                comboBoxChooseConstellation.DataSource = bs;
 
-            //reset the total results label
-            labelTotalResults.Text = $"Total Results: {bs.Count}";
+                //reset the total results label
+                labelTotalResults.Text = $"Total Results: {bs.Count}";
 
-            //reset all other searches
-            comboBoxSearchByHemisphere.SelectedIndex = -1;
-            comboBoxSearchByOrigin.SelectedIndex = -1;
-            textBoxFindLetter.Text = null;
+                //reset all other searches
+                comboBoxSearchByHemisphere.SelectedIndex = -1;
+                comboBoxSearchByOrigin.SelectedIndex = -1;
+                textBoxFindLetter.Text = null;
+            }
         }
 
         //method to set up the origin combo box
@@ -431,26 +439,30 @@ namespace Constellations.UI
         //method for when the user clicks the Search By Origin button
         private void buttonSearchByOrigin_Click(object sender, EventArgs e)
         {
-            //variable to hold the selected origin
-            string origin = comboBoxSearchByOrigin.SelectedItem.ToString();
+            //make sure an item in the combo box has been selected
+            if (comboBoxSearchByOrigin.SelectedIndex != -1)
+            {
+                //variable to hold the selected origin
+                string origin = comboBoxSearchByOrigin.SelectedItem.ToString();
 
-            //create a new binding source
-            BindingSource bs = new BindingSource();
-            //set the data source to all matching constellation names
-            bs.DataSource = from constell in constellations
-                            where constell.Origin.Equals(origin)
-                            select constell.Name;
+                //create a new binding source
+                BindingSource bs = new BindingSource();
+                //set the data source to all matching constellation names
+                bs.DataSource = from constell in constellations
+                                where constell.Origin.Equals(origin)
+                                select constell.Name;
 
-            //set the binding source to the combo box
-            comboBoxChooseConstellation.DataSource = bs;
+                //set the binding source to the combo box
+                comboBoxChooseConstellation.DataSource = bs;
 
-            //reset the total results label
-            labelTotalResults.Text = $"Total Results: {bs.Count}";
+                //reset the total results label
+                labelTotalResults.Text = $"Total Results: {bs.Count}";
 
-            //reset all other searches
-            textBoxFindLetter.Text = null;
-            comboBoxSearchByHemisphere.SelectedIndex = -1;
-            comboBoxSearchByFamily.SelectedIndex = -1;
+                //reset all other searches
+                textBoxFindLetter.Text = null;
+                comboBoxSearchByHemisphere.SelectedIndex = -1;
+                comboBoxSearchByFamily.SelectedIndex = -1;
+            }
         }
     }
 }
