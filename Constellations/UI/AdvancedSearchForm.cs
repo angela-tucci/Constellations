@@ -37,6 +37,7 @@ namespace Constellations.UI
             comboBoxSelectMonth.Hide();
             buttonSearch.Hide();
             listBoxResults.Hide();
+            buttonViewImages.Hide();
 
             HideLabelsAndBoxes();
         }
@@ -127,6 +128,7 @@ namespace Constellations.UI
                 buttonSearch.Hide();
                 listBoxResults.Hide();
                 labelTotalResults.Hide();
+                buttonViewImages.Hide();
 
                 HideLabelsAndBoxes();
             }
@@ -142,6 +144,7 @@ namespace Constellations.UI
                 buttonSearch.Show();
                 listBoxResults.Hide();
                 labelTotalResults.Hide();
+                buttonViewImages.Hide();
             }
             HideLabelsAndBoxes();
         }
@@ -176,6 +179,7 @@ namespace Constellations.UI
                 if (bsResults.Count > 0)
                 {
                     listBoxResults.Show();
+                    buttonViewImages.Show();
 
                     //show labels and boxes
                     labelName.Show();
@@ -247,6 +251,38 @@ namespace Constellations.UI
                     i = list.Count;
                 }
             }
+        }
+
+        //method for when the user selects the View Images button
+        private void buttonViewImages_Click(object sender, EventArgs e)
+        {
+            //create variables for name and the image paths
+            string name = listBoxResults.SelectedItem.ToString();
+            string skyImagePath = "", starsMapPath = "", mythImagePath = "";
+
+            //convert constellations to a list
+            List<Constellation> list = constellations.ToList();
+            //iterate the list
+            for(int i = 0; i < list.Count; i++)
+            {
+                //if the name equals the selected item in the list box...
+                if(list[i].Name == name)
+                {
+                    //set the variables
+                    skyImagePath = list[i].ImagePathSky;
+                    starsMapPath = list[i].ImagePathStars;
+                    mythImagePath = list[i].ImagePathPicture;
+
+                    //reset i to force quit the loop
+                    i = list.Count;
+                }
+            }
+
+            //create the new form
+            ViewImagesForm form = new ViewImagesForm(skyImagePath, starsMapPath, mythImagePath);
+            //set the size of the form
+            form.Size = new Size(690, 730);
+            form.ShowDialog();
         }
     }
 }

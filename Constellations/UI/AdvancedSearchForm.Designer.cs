@@ -52,6 +52,7 @@
             this.richTextBoxMythology = new System.Windows.Forms.RichTextBox();
             this.labelMythology = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
+            this.buttonViewImages = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +96,7 @@
             // 
             // buttonSearch
             // 
+            this.buttonSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSearch.Location = new System.Drawing.Point(6, 288);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 23);
@@ -254,12 +256,24 @@
             this.labelName.TabIndex = 23;
             this.labelName.Text = "Name";
             // 
+            // buttonViewImages
+            // 
+            this.buttonViewImages.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonViewImages.Location = new System.Drawing.Point(265, 324);
+            this.buttonViewImages.Name = "buttonViewImages";
+            this.buttonViewImages.Size = new System.Drawing.Size(86, 23);
+            this.buttonViewImages.TabIndex = 24;
+            this.buttonViewImages.Text = "View Images";
+            this.buttonViewImages.UseVisualStyleBackColor = true;
+            this.buttonViewImages.Click += new System.EventHandler(this.buttonViewImages_Click);
+            // 
             // AdvancedSearchForm
             // 
             this.AcceptButton = this.buttonSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 392);
+            this.Controls.Add(this.buttonViewImages);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelMythology);
             this.Controls.Add(this.richTextBoxMythology);
@@ -278,6 +292,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AdvancedSearchForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Advanced Search";
             this.Load += new System.EventHandler(this.CalenderLookUpForm_Load);
             this.groupBox1.ResumeLayout(false);
@@ -311,5 +326,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxMythology;
         private System.Windows.Forms.Label labelMythology;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Button buttonViewImages;
     }
 }

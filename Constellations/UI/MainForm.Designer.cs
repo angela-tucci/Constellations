@@ -138,6 +138,7 @@
             // 
             // buttonViewStars
             // 
+            this.buttonViewStars.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonViewStars.Location = new System.Drawing.Point(830, 12);
             this.buttonViewStars.Name = "buttonViewStars";
             this.buttonViewStars.Size = new System.Drawing.Size(131, 23);
@@ -157,6 +158,7 @@
             // 
             // buttonViewMythologyImage
             // 
+            this.buttonViewMythologyImage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonViewMythologyImage.Location = new System.Drawing.Point(1001, 12);
             this.buttonViewMythologyImage.Name = "buttonViewMythologyImage";
             this.buttonViewMythologyImage.Size = new System.Drawing.Size(152, 23);
@@ -167,6 +169,7 @@
             // 
             // buttonViewSkyImage
             // 
+            this.buttonViewSkyImage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonViewSkyImage.Location = new System.Drawing.Point(607, 12);
             this.buttonViewSkyImage.Name = "buttonViewSkyImage";
             this.buttonViewSkyImage.Size = new System.Drawing.Size(176, 23);
@@ -284,6 +287,7 @@
             // 
             // buttonAdvancedSearch
             // 
+            this.buttonAdvancedSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdvancedSearch.Location = new System.Drawing.Point(12, 569);
             this.buttonAdvancedSearch.Name = "buttonAdvancedSearch";
             this.buttonAdvancedSearch.Size = new System.Drawing.Size(121, 23);
@@ -319,6 +323,7 @@
             // 
             // buttonSearchLetter
             // 
+            this.buttonSearchLetter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSearchLetter.Location = new System.Drawing.Point(12, 137);
             this.buttonSearchLetter.Name = "buttonSearchLetter";
             this.buttonSearchLetter.Size = new System.Drawing.Size(121, 23);
@@ -329,6 +334,7 @@
             // 
             // buttonShowAllConstellations
             // 
+            this.buttonShowAllConstellations.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonShowAllConstellations.Location = new System.Drawing.Point(12, 451);
             this.buttonShowAllConstellations.Name = "buttonShowAllConstellations";
             this.buttonShowAllConstellations.Size = new System.Drawing.Size(139, 23);
@@ -366,6 +372,7 @@
             // 
             // buttonSearchByHemisphere
             // 
+            this.buttonSearchByHemisphere.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSearchByHemisphere.Location = new System.Drawing.Point(12, 230);
             this.buttonSearchByHemisphere.Name = "buttonSearchByHemisphere";
             this.buttonSearchByHemisphere.Size = new System.Drawing.Size(136, 23);
@@ -403,6 +410,7 @@
             // 
             // buttonSearchByFamily
             // 
+            this.buttonSearchByFamily.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSearchByFamily.Location = new System.Drawing.Point(12, 323);
             this.buttonSearchByFamily.Name = "buttonSearchByFamily";
             this.buttonSearchByFamily.Size = new System.Drawing.Size(115, 23);
@@ -431,6 +439,7 @@
             // 
             // buttonSearchByOrigin
             // 
+            this.buttonSearchByOrigin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSearchByOrigin.Location = new System.Drawing.Point(12, 416);
             this.buttonSearchByOrigin.Name = "buttonSearchByOrigin";
             this.buttonSearchByOrigin.Size = new System.Drawing.Size(115, 23);
