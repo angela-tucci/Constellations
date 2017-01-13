@@ -16,6 +16,7 @@ using System.Windows.Forms;
 using Constellations.Model;
 using Constellations.Data;
 using System.Text.RegularExpressions;
+using iTextSharp.text;
 
 namespace Constellations.UI
 {
@@ -40,6 +41,9 @@ namespace Constellations.UI
             InitializeComboBoxSearchByHemisphere();
             InitializeComboBoxSearchByFamily();
             InitializeComboBoxSearchByOrigin();
+
+            //hide the print preview button for now
+            buttonPrint.Hide();
         }
 
         //method to set up the repository combo box
@@ -125,10 +129,10 @@ namespace Constellations.UI
         //method to set up font styles for each label/rich text box
         private void SetFontStyles()
         {
-            Font font = new Font("Tahoma", 12);
-            Font fontBold = new Font("Tahoma", 12, FontStyle.Bold);
+            System.Drawing.Font font = new System.Drawing.Font("Tahoma", 12);
+            System.Drawing.Font fontBold = new System.Drawing.Font("Tahoma", 12, FontStyle.Bold);
 
-            labelName.Font = new Font("Tahoma", 30);
+            labelName.Font = new System.Drawing.Font("Tahoma", 30);
             labelAbbreviation.Font = font;
             labelGenitive.Font = font;
             labelFamily.Font = font;
@@ -138,7 +142,7 @@ namespace Constellations.UI
             labelHemisphere.Font = fontBold;
             labelSeason.Font = fontBold;
             labelBestSeen.Font = fontBold;
-            labelNote.Font = new Font("Tahoma", 8);
+            labelNote.Font = new System.Drawing.Font("Tahoma", 8);
             labelNearbyConstellations.Font = fontBold;
             labelMythology.Font = fontBold;
             richTextBoxNearbyConstellations.Font = font;
@@ -239,7 +243,7 @@ namespace Constellations.UI
             if (textBoxFindLetter.Text.Length == 1 && Regex.IsMatch(textBoxFindLetter.Text, @"^[a-zA-Z]+$"))
             {
                 //set the text to the variable
-                letter = textBoxFindLetter.Text;
+                letter = textBoxFindLetter.Text.ToLower();
 
                 //array to hold each letter of the constellation's name
                 char[] array;
@@ -249,8 +253,8 @@ namespace Constellations.UI
                 //for each name in the list...
                 for(int i = 0; i < names.Count; i++)
                 {
-                    //split the name into a char array
-                    array = names[i].ToCharArray();
+                    //split the name into a char array all in lower case
+                    array = names[i].ToLower().ToCharArray();
                     
                     //if the first item in the char array is the same as the entered letter...
                     if(array[0].ToString().Equals(letter))
@@ -463,6 +467,26 @@ namespace Constellations.UI
                 comboBoxSearchByHemisphere.SelectedIndex = -1;
                 comboBoxSearchByFamily.SelectedIndex = -1;
             }
+        }
+
+        //method for when the Print button is clicked
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            string name = comboBoxChooseConstellation.Text;
+            List<Constellation> list = constellations.ToList();
+            Constellation constellation = null;
+
+            for(int i = 0; i < list.Count; i++)
+            {
+                if(list[i].Name == name)
+                {
+                    constellation = list[i];
+                    i = list.Count;
+                }
+            }
+
+            PrintPreviewForm form = new PrintPreviewForm(constellation);
+            form.ShowDialog();
         }
     }
 }

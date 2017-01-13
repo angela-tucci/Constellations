@@ -16,7 +16,13 @@ namespace Constellations.UI
     {
         static void Main(string[] args)
         {
-            Application.Run(new MainForm()); //run the main form
+            try {
+                Application.Run(new MainForm()); //run the main form
+            }
+            catch(Exception e)
+            {
+
+            }
         }
     }
 }

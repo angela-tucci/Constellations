@@ -8,10 +8,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Constellations.Model
 {
-    class Constellation
+    public class Constellation
     {
         //fields
         private string _name; //name of constellation
@@ -176,21 +177,27 @@ namespace Constellations.Model
         public void SetState(string constellationInfo)
         {
             string[] data = constellationInfo.Split('@');
-            Name = data[0];
-            Abbreviation = data[1];
-            Genitive = data[2];
-            Family = data[3];
-            Origin = data[4];
-            Meaning = data[5];
-            BrightestStar = data[6];
-            Hemisphere = data[7];
-            Season = data[8];
-            BestSeen = data[9];
-            NearbyConstellations = data[10];
-            Mythology = data[11];
-            ImagePathSky = data[12];
-            ImagePathStars = data[13];
-            ImagePathPicture = data[14];
+            try {
+                Name = data[0];
+                Abbreviation = data[1];
+                Genitive = data[2];
+                Family = data[3];
+                Origin = data[4];
+                Meaning = data[5];
+                BrightestStar = data[6];
+                Hemisphere = data[7];
+                Season = data[8];
+                BestSeen = data[9];
+                NearbyConstellations = data[10];
+                Mythology = data[11];
+                ImagePathSky = data[12];
+                ImagePathStars = data[13];
+                ImagePathPicture = data[14];
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show($"The file is missing information.\nLine starting with: {data[0]}", e.Message);
+            }
         }
     }
 }
