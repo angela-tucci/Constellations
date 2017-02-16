@@ -16,7 +16,6 @@ using System.Windows.Forms;
 using Constellations.Model;
 using Constellations.Data;
 using System.Text.RegularExpressions;
-using iTextSharp.text;
 
 namespace Constellations.UI
 {
@@ -43,7 +42,7 @@ namespace Constellations.UI
             InitializeComboBoxSearchByOrigin();
 
             //hide the print preview button for now
-            buttonPrint.Hide();
+            //buttonPrint.Hide();
         }
 
         //method to set up the repository combo box
@@ -472,21 +471,7 @@ namespace Constellations.UI
         //method for when the Print button is clicked
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            string name = comboBoxChooseConstellation.Text;
-            List<Constellation> list = constellations.ToList();
-            Constellation constellation = null;
-
-            for(int i = 0; i < list.Count; i++)
-            {
-                if(list[i].Name == name)
-                {
-                    constellation = list[i];
-                    i = list.Count;
-                }
-            }
-
-            PrintPreviewForm form = new PrintPreviewForm(constellation);
-            form.ShowDialog();
+            
         }
     }
 }

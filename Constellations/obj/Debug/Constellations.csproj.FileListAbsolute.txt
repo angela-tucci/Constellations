@@ -9,6 +9,5 @@ C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Const
 C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.Properties.Resources.resources
 C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.UI.AdvancedSearchForm.resources
 C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.UI.ViewImagesForm.resources
-C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\obj\Debug\Constellations.UI.PrintPreviewForm.resources
 C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\bin\Debug\itextsharp.dll
 C:\Users\angela\Desktop\to keep\C#\Constellations\Constellations\bin\Debug\itextsharp.xml

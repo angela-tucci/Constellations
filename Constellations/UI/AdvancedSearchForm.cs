@@ -109,10 +109,9 @@ namespace Constellations.UI
                                 select c.First().BestSeen;
 
                 //create an IEnumerable of sorted months
-                var sortedMonths = allMonths
-                    .Select(m => new { Name = m, Sort = DateTime.ParseExact(m, "MMMM", CultureInfo.InvariantCulture) })
-                    .OrderBy(m => m.Sort.Month)
-                    .Select(m => m.Name);
+                var sortedMonths = from month in allMonths
+                                   orderby DateTime.ParseExact(month, "MMMM", CultureInfo.InvariantCulture)
+                                   select month;
 
                 //create a new binding source and set the data source to the sorted months
                 BindingSource bs = new BindingSource();

@@ -68,7 +68,6 @@
             this.labelSearchByOrigin = new System.Windows.Forms.Label();
             this.comboBoxSearchByOrigin = new System.Windows.Forms.ComboBox();
             this.buttonSearchByOrigin = new System.Windows.Forms.Button();
-            this.buttonPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -449,17 +448,6 @@
             this.buttonSearchByOrigin.UseVisualStyleBackColor = true;
             this.buttonSearchByOrigin.Click += new System.EventHandler(this.buttonSearchByOrigin_Click);
             // 
-            // buttonPrint
-            // 
-            this.buttonPrint.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPrint.Location = new System.Drawing.Point(12, 622);
-            this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(156, 23);
-            this.buttonPrint.TabIndex = 37;
-            this.buttonPrint.Text = "Preview Contents to Print";
-            this.buttonPrint.UseVisualStyleBackColor = true;
-            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,7 +455,6 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonSearchByOrigin);
             this.Controls.Add(this.comboBoxSearchByOrigin);
             this.Controls.Add(this.labelSearchByOrigin);
@@ -550,6 +537,5 @@
         private System.Windows.Forms.Label labelSearchByOrigin;
         private System.Windows.Forms.ComboBox comboBoxSearchByOrigin;
         private System.Windows.Forms.Button buttonSearchByOrigin;
-        private System.Windows.Forms.Button buttonPrint;
     }
 }
