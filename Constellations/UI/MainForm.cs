@@ -32,7 +32,7 @@ namespace Constellations.UI
         private void MainForm_Load(object sender, EventArgs e)
         {
             //set the form to be maximized on any resolution
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            //this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 
             //set up all combo boxes
             InitializeComboBoxRepo();

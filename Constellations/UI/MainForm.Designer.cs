@@ -485,6 +485,7 @@
             this.Controls.Add(this.labelChooseConstellation);
             this.Controls.Add(this.comboBoxChooseConstellation);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Constellations";
             this.Load += new System.EventHandler(this.MainForm_Load);
